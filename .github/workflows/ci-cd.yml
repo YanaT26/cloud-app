@@ -29,7 +29,7 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
 
       - name: Build Docker image
-        run: docker build -t ianatitica/cloudapp:latest .
+        run: docker build -f DOCKERFILE -t ianatitica/cloudapp:latest .
 
       - name: Push Docker image
         run: docker push ianatitica/cloudapp:latest
